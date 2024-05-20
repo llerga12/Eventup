@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 
 public class GlavniProzor {
 
-	private JFrame frame;
+	private JFrame frmEventup;
 
 	/**
 	 * Launch the application.
@@ -19,7 +19,7 @@ public class GlavniProzor {
 			public void run() {
 				try {
 					GlavniProzor window = new GlavniProzor();
-					window.frame.setVisible(true);
+					window.frmEventup.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -38,19 +38,40 @@ public class GlavniProzor {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmEventup = new JFrame();
+		frmEventup.setTitle("EVENT-UP");
+		frmEventup.setBounds(100, 100, 450, 300);
+		frmEventup.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmEventup.getContentPane().setLayout(null);
 		
-		JButton btnNewButton = new JButton("Tipka1");
+		JButton btnNewButton = new JButton("Organizator");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				DlgProzor1 dlg = new DlgProzor1();
+				Organizator dlg = new Organizator();
 				dlg.setVisible(true);
 			}
 		});
-		btnNewButton.setBounds(10, 11, 89, 23);
-		frame.getContentPane().add(btnNewButton);
+		btnNewButton.setBounds(141, 130, 140, 37);
+		frmEventup.getContentPane().add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Izvodac");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_1.setBounds(141, 34, 140, 37);
+		frmEventup.getContentPane().add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("Nastup");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_2.setBounds(141, 82, 140, 37);
+		frmEventup.getContentPane().add(btnNewButton_2);
+		
+		JButton btnNewButton_3 = new JButton("Racun");
+		btnNewButton_3.setBounds(141, 178, 140, 37);
+		frmEventup.getContentPane().add(btnNewButton_3);
 	}
 }
