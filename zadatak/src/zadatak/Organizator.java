@@ -16,7 +16,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.awt.event.ActionEvent;
 
-public class DlgProzor1 extends JDialog {
+public class Organizator extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
 	private JTextField tfsifra;
@@ -29,7 +29,7 @@ public class DlgProzor1 extends JDialog {
 	 */
 	public static void main(String[] args) {
 		try {
-			DlgProzor1 dialog = new DlgProzor1();
+			Organizator dialog = new Organizator();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
@@ -40,7 +40,8 @@ public class DlgProzor1 extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public DlgProzor1() {
+	public Organizator() {
+		setTitle("Organizator");
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -48,7 +49,7 @@ public class DlgProzor1 extends JDialog {
 		contentPanel.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Sifra_Organizatora");
-		lblNewLabel.setBounds(24, 28, 97, 17);
+		lblNewLabel.setBounds(24, 28, 126, 17);
 		contentPanel.add(lblNewLabel);
 		
 		tfsifra = new JTextField();
@@ -57,7 +58,7 @@ public class DlgProzor1 extends JDialog {
 		tfsifra.setColumns(10);
 		{
 			JLabel lblNazivorganizatora = new JLabel("Naziv_Organizatora");
-			lblNazivorganizatora.setBounds(24, 63, 97, 17);
+			lblNazivorganizatora.setBounds(24, 63, 126, 17);
 			contentPanel.add(lblNazivorganizatora);
 		}
 		{
@@ -74,12 +75,12 @@ public class DlgProzor1 extends JDialog {
 		}
 		{
 			JLabel lblNewLabel_1 = new JLabel("Kontakt_Organizatora");
-			lblNewLabel_1.setBounds(24, 106, 106, 17);
+			lblNewLabel_1.setBounds(24, 106, 126, 17);
 			contentPanel.add(lblNewLabel_1);
 		}
 		{
 			JLabel lblNewLabel_1 = new JLabel("Lokacija_Organizatora");
-			lblNewLabel_1.setBounds(24, 154, 119, 17);
+			lblNewLabel_1.setBounds(24, 154, 126, 17);
 			contentPanel.add(lblNewLabel_1);
 		}
 		{
