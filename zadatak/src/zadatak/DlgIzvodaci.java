@@ -43,6 +43,7 @@ public class DlgIzvodaci extends JDialog {
 	 * Create the dialog.
 	 */
 	public DlgIzvodaci() {
+		setTitle("Izvodaci");
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));

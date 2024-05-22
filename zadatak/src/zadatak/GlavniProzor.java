@@ -42,35 +42,44 @@ public class GlavniProzor {
 		frmEventup.setTitle("EVENT-UP");
 		frmEventup.setBounds(100, 100, 450, 300);
 		frmEventup.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmEventup.getContentPane().setLayout(null);
 		
 		JButton btnNewButton = new JButton("Organizator");
+		btnNewButton.setBounds(141, 130, 140, 37);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Organizator dlg = new Organizator();
 				dlg.setVisible(true);
 			}
 		});
-		btnNewButton.setBounds(141, 130, 140, 37);
+		frmEventup.getContentPane().setLayout(null);
 		frmEventup.getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Izvodac");
+		btnNewButton_1.setBounds(141, 34, 140, 37);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				DlgIzvodaci dlg = new DlgIzvodaci();
+				dlg.setVisible(true);
 			}
 		});
-		btnNewButton_1.setBounds(141, 34, 140, 37);
 		frmEventup.getContentPane().add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Nastup");
+		btnNewButton_2.setBounds(141, 82, 140, 37);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 			}
 		});
-		btnNewButton_2.setBounds(141, 82, 140, 37);
 		frmEventup.getContentPane().add(btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("Racun");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Racun dlg = new Racun();
+				dlg.setVisible(true);
+			}
+		});
 		btnNewButton_3.setBounds(141, 178, 140, 37);
 		frmEventup.getContentPane().add(btnNewButton_3);
 	}

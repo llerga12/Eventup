@@ -118,7 +118,7 @@ public class Racun extends JDialog {
 							  Connection conn = DriverManager.getConnection 
 				("jdbc:mysql://ucka.veleri.hr/llerga?" +
 				 "user=llerga&password=11");
-							  //id, Sifra_organizatora, Naziv_organizatora, Kontakt_organizatora, Lokacija_organizatora
+							  //id, Sifra_Racuna, Datum_racuna, Iznos_racuna, Sifra_organizatora, Sifra_nastupa
 							  String sql = "INSERT INTO Organizator VALUES(?,?,?,?,?);";
 
 							  PreparedStatement stmt = conn.prepareStatement(sql);
